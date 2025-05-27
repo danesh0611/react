@@ -1,6 +1,7 @@
 import "./App.css"
 import Course from "./Course"
 import Navbar from "./Navbar"
+import Courselist from "./Courselist"
 
 
 
@@ -11,7 +12,7 @@ function App() {
     <>
    
     <Course name="html"  des="hello" show={true}/>
-    <Course/>
+    <Courselist/>
       
     </>
   )
