@@ -1,6 +1,12 @@
 import PropTypes from 'prop-types';
+import { useState } from 'react';
 
 function Course({ name = "notset", des = "notset", show = false ,price= "notset"}) {
+    const[purchased,setpurchaseed]= useState(false)
+    function buy(){
+        console.log("buying course");
+        setpurchaseed(true);
+    }
   
     return (
         <div className="card">
@@ -8,6 +14,8 @@ function Course({ name = "notset", des = "notset", show = false ,price= "notset"
             <h2>{des}</h2>
             <h3>{price}</h3>
             <p>{show ? "Course is available" : "Course is not available"}</p>
+            <button onClick={buy}>Buy now </button>
+            <p>{purchased?"already purchased" : "not purchased"}</p>
         </div>
     );
 }
